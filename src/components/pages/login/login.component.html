@@ -1,0 +1,16 @@
+<div class="login-wrapper">
+  <div class="login-card">
+    <div class="logo-area">
+      <img src="assets/zorimed-logo.png" alt="ZoriMed logo" />
+      <h1>Interpretare automată a analizelor medicale</h1>
+      <p>Pagina de autentificare</p>
+    </div>
+    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+      <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
+      <input type="password" name="password" [(ngModel)]="password" placeholder="Parolă" required />
+      <button type="submit">Autentificare</button>
+      <button type="submit">Creare Cont</button>
+      <p *ngIf="loginError" class="error">Date incorecte</p>
+    </form>
+  </div>
+</div>
