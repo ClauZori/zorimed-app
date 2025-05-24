@@ -50,8 +50,6 @@ removeImage() {
       profileImage: this.profileImage
     });
 
- 
-
 
     alert('Registration successful!');
   }
