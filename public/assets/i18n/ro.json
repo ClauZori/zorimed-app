@@ -1,0 +1,17 @@
+{
+  "login-component": {
+    "title": "Interpretare automată a analizelor medicale",
+    "subtitle": "Pagina de autentificare",
+    "forms": {
+      "username": "Nume utilizator",
+      "password": "Parola"
+    },
+    "buttons": {
+      "login": "Autentificare",
+      "register": "Creare cont"
+    },
+    "errors": {
+      "incorrect_data": "Date incorecte"
+    }
+  }
+}
