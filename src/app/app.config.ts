@@ -10,6 +10,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageGuardService } from '../services/language-guard.service';
+import { MatIconModule } from '@angular/material/icon';
 
 const clients: any[] = [
 ];

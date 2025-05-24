@@ -1,0 +1,39 @@
+/* Fixed header */
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; // Adjust as needed
+  background-color: #fff; // Optional for visibility
+  z-index: 1000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed footer */
+app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; // Adjust as needed
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main layout */
+.content-layout {
+  display: flex;
+  padding-top: 60px;  // Must match header height
+  padding-bottom: 60px; // Must match footer height
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
