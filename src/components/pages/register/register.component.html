@@ -1,0 +1,31 @@
+<div class="register-wrapper">
+  <div class="register-card">
+    <h2>Inregistrare pentru ZoriMed</h2>
+    <form (ngSubmit)="onRegister()" #form="ngForm">
+      
+      <input type="text" name="Nume" [(ngModel)]="lastName" placeholder="Nume" required />
+      <input type="text" name="Prenume" [(ngModel)]="firstName" placeholder="Prenume" required />
+      <input type="email" name="mail" [(ngModel)]="email" placeholder="Email" required />
+      <input type="text" name="CNP" [(ngModel)]="cnp" placeholder="CNP" maxlength="13" required />
+      <input type="password" name="Parolă" [(ngModel)]="password" placeholder="Parola" required />
+
+      <!-- Upload area -->
+      <label class="upload-label">
+       Incarca o poza de Profil
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+      </label>
+
+      <!-- Image Preview -->
+      <div *ngIf="previewUrl" class="image-preview-container">
+        <img [src]="previewUrl" alt="Profile Preview" class="preview" />
+        
+        <!-- Separate remove button -->
+        <div class="remove-btn-container">
+          <button type="button" class="remove-button" (click)="removeImage()">Remove Image</button>
+        </div>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</div>
