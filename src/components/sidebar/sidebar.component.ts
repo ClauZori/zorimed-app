@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../../shared/shared.module';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.scss']
+  styleUrls: ['./sidebar.component.scss'],
+  imports: [
+    SharedModule
+  ]
 })
 export class SidebarComponent {
   isExpanded = false;

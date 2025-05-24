@@ -1,68 +1,53 @@
-.sidebar-wrapper {
-  position: relative;
-  height: 100vh;
+.sidebar {
   width: 62px;
+  transition: width 0.3s ease;
+  background-color: #007acc;
+  color: white;
+  height: 100vh;
   overflow: hidden;
-  transition: width 0.2s ease-in-out;
 
   &.expanded {
     width: 200px;
   }
 }
 
-.toggle-tab {
-  height: 100%;
-  width: 62px;
-  background-color: #007acc;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.sidebar-inner {
+  padding-top: 20px;
 }
 
-.sidebar-content {
-  background-color: #f8f9fb;
-  border-right: 1px solid #ddd;
-  height: 100%;
-  padding: 20px 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-nav ul {
+ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-nav li {
-  margin-bottom: 12px;
+li {
+  margin-bottom: 10px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
+a {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-
-nav a:hover,
-nav a.active {
-  background-color: #007acc;
+  gap: 12px;
+  padding: 10px;
   color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+
+  &:hover,
+  &.active {
+    background-color: #005fa3;
+  }
 }
 
-.icon {
-  font-size: 18px;
+mat-icon.icon {
+  font-size: 22px;
+  width: 50px;
   text-align: center;
-  width: 24px;
 }
 
 .label {
+  font-size: 14px;
   white-space: nowrap;
 }
