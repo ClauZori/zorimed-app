@@ -13,5 +13,20 @@
     "errors": {
       "incorrect_data": "Date incorecte"
     }
+  },
+  "register-component": {
+    "title": "Inregistrare pentru ZoriMed",
+    "forms": {
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "email": "Email",
+      "cnp": "CNP",
+      "password": "Parola",
+      "profile-picture": "Incarca o poza de Profil"
+    },
+    "buttons": {
+      "remove-photo": "Sterge poza",
+      "register": "Creare cont"
+    }
   }
 }

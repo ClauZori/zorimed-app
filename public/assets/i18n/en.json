@@ -13,5 +13,20 @@
     "errors": {
       "incorrect_data": "Incorrect data"
     }
+  },
+  "register-component": {
+    "title": "Registration for ZoriMed",
+    "forms": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "cnp": "CNP",
+      "password": "Password",
+      "profile-picture": "Upload a Profile Picture"
+    },
+    "buttons": {
+      "remove-photo": "Remove Photo",
+      "register": "Create Account"
+    }
   }
 }

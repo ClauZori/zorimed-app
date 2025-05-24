@@ -1,26 +1,39 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../../../shared/shared.module';
+import { GenericComponent } from '../../generic/generic.component';
+import { Location } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule
+    SharedModule
   ]
 })
-export class LoginComponent {
+export class LoginComponent extends GenericComponent
+  implements OnInit, OnDestroy {
   username = '';
   password = '';
   loginError = false;
 
-  constructor(private router: Router) {}
+  constructor(
+    protected override router: Router,
+    protected override location: Location,
+    protected override translateService: TranslateService
+  ) {
+    super(router, location, translateService);
+  }
+
+  override ngOnInit() {
+    super.ngOnInit();
+  }
+
+  override ngOnDestroy(): void {
+    super.ngOnDestroy();
+  }
 
   onLogin() {
     // if (this.authService.login(this.username, this.password)) {

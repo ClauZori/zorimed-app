@@ -1,17 +1,17 @@
 <div class="register-wrapper">
   <div class="register-card">
-    <h2>Inregistrare pentru ZoriMed</h2>
+    <h2>{{'register-component.title' | translate}}</h2>
     <form (ngSubmit)="onRegister()" #form="ngForm">
       
-      <input type="text" name="Nume" [(ngModel)]="lastName" placeholder="Nume" required />
-      <input type="text" name="Prenume" [(ngModel)]="firstName" placeholder="Prenume" required />
-      <input type="email" name="mail" [(ngModel)]="email" placeholder="Email" required />
-      <input type="text" name="CNP" [(ngModel)]="cnp" placeholder="CNP" maxlength="13" required />
-      <input type="password" name="Parolă" [(ngModel)]="password" placeholder="Parola" required />
+      <input type="text" name="Nume" [(ngModel)]="lastName" [placeholder]="'register-component.forms.lastName' | translate" required />
+      <input type="text" name="Prenume" [(ngModel)]="firstName" [placeholder]="'register-component.forms.firstName' | translate" required />
+      <input type="email" name="mail" [(ngModel)]="email" [placeholder]="'register-component.forms.email' | translate" required />
+      <input type="text" name="CNP" [(ngModel)]="cnp" [placeholder]="'register-component.forms.cnp' | translate" maxlength="13" required />
+      <input type="password" name="Parolă" [(ngModel)]="password" [placeholder]="'register-component.forms.password' | translate" required />
 
       <!-- Upload area -->
       <label class="upload-label">
-       Incarca o poza de Profil
+       {{'register-component.forms.profile-picture' | translate}}
         <input type="file" (change)="onFileSelected($event)" accept="image/*" />
       </label>
 
@@ -21,11 +21,11 @@
         
         <!-- Separate remove button -->
         <div class="remove-btn-container">
-          <button type="button" class="remove-button" (click)="removeImage()">Remove Image</button>
+          <button type="button" class="remove-button" (click)="removeImage()">{{'register-component.buttons.remove-photo' | translate}}</button>
         </div>
       </div>
 
-      <button type="submit">Register</button>
+      <button type="submit">{{'register-component.buttons.register' | translate}}</button>
     </form>
   </div>
 </div>
