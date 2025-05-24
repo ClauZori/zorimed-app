@@ -9,7 +9,9 @@
       <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
       <input type="password" name="password" [(ngModel)]="password" placeholder="Parolă" required />
       <button type="submit">{{'login-component.buttons.login' | translate}}</button>
-      <button type="submit">{{'login-component.buttons.register' | translate}}</button>
+      <button (click)="navigateToUrl('/register')" type="submit">
+        {{'login-component.buttons.register' | translate}}
+      </button>
       <p *ngIf="loginError" class="error">{{'login-component.errors.incorrect_data' | translate}}</p>
     </form>
   </div>
