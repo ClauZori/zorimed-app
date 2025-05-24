@@ -1,13 +1,26 @@
-<div class="sidebar-wrapper" [class.expanded]="isExpanded" (mouseenter)="isExpanded = true" (mouseleave)="isExpanded = false">
-  <div class="toggle-tab">☰</div>
-
-  <aside class="sidebar-content">
-    <nav>
-      <ul>
-        <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
-        <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
-        <li><a routerLink="/analysis" routerLinkActive="active">Medical Analysis</a></li>
-      </ul>
-    </nav>
-  </aside>
+<div class="sidebar" [class.expanded]="isExpanded"
+     (mouseenter)="isExpanded = true" (mouseleave)="isExpanded = false">
+  
+  <div class="sidebar-inner">
+    <ul>
+      <li>
+        <a routerLink="/dashboard" routerLinkActive="active">
+          <!-- <mat-icon class="icon">dashboard</mat-icon> -->
+          <span class="label" *ngIf="isExpanded">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/profile" routerLinkActive="active">
+          <!-- <mat-icon>person</mat-icon> -->
+          <span class="label" *ngIf="isExpanded">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/analysis" routerLinkActive="active">
+          <!-- <mat-icon >local_hospital</mat-icon> -->
+          <span class="label" *ngIf="isExpanded">Medical Analysis</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
